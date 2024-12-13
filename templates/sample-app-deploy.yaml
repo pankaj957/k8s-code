@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-application
+  labels:
+    app: sample-application
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: sample-application
+  template:
+    metadata:
+      labels:
+        app: sample-application
+    spec:
+      containers:
+      - name: sample-application
+        image: docker.io/jadhav957/samplejava:latest
+        ports:
+        - containerPort: 8080
