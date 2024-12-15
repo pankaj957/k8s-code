@@ -1,11 +1,11 @@
-namespace: dev
+namespace: prod
   
 replicaCount: 2
 
 image:
   repository: docker.io/jadhav957/samplejava
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 containerPort: 8080
 
@@ -16,5 +16,5 @@ service:
 ingress:
   enabled: true
   className: nginx
-  host: dev.testjava.infinityfreeapp.com
+  host: prod.testjava.infinityfreeapp.com
 
