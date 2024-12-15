@@ -1,5 +1,5 @@
 apiVersion: v2
-name: sample-application
+name: sample-application-prod
 description: A Helm chart for deploying a sample application
 type: application
 version: 1.0.0
